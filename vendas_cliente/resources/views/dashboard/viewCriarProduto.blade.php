@@ -61,10 +61,31 @@
                         </div>
                     </div>
                 </div>
-                <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 80%;">Nome</th>
+                                            <th>Ações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach($produtos as $id => $produto) { ?>
+                                        <tr>
+                                            <td><?= $produto['nome'] ?></td>
+                                            <td></td>
+                                        </tr>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- /.container-fluid -->
         </div>
-        <script src="{{ asset ("/js/formIndexPage.js") }}"></script>
-        <!-- /.content -->
+        <script src="{{ asset ("/js/viewCriarProduto.js") }}"></script>
         @endsection

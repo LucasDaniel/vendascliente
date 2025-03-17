@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css") }}" type="text/css">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/dist/css/adminlte.min.css") }}" type="text/css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" ) }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" ) }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css" ) }}" type="text/css">
 
     <link rel="stylesheet" href="{{ asset("/css/style.css") }}" type="text/css">
 </head>

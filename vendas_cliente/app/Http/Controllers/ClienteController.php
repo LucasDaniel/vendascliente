@@ -29,6 +29,6 @@ class ClienteController extends Controller
     }
 
     public function viewCriarCliente() {
-        return view('dashboard.viewCriarCliente');
+        return view('dashboard.viewCriarCliente',['clientes'=>$this->service->list()]);
     }
 }
