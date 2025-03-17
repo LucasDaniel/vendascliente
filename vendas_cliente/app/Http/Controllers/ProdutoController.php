@@ -20,7 +20,7 @@ class ProdutoController extends Controller
     public function create(Request $request)
     {
         $this->service->create($request->all());
-        return true;
+        return redirect('/produto');
     }
 
     public function delete(int $id)
@@ -28,7 +28,7 @@ class ProdutoController extends Controller
         return $this->service->delete($id);
     }
 
-    public function viewCriarProduto() {
-        return view('dashboard.viewCriarProduto');
+    public function viewProduto() {
+        return view('dashboard.viewProduto',['produtos'=>$this->service->list()]);
     }
 }

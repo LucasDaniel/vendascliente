@@ -38,24 +38,25 @@
                     <div class="col-md-12">
                         <div class="card card-primary">
                             <!-- form start -->
-                            <form id="quickForm">
+                            <form href="/produto" method="POST" target="_self" id="quickForm">
+                                @csrf
                                 <div class="row">
-                                    <div class="mt-6">
+                                    <div class="col-md-6">
                                         <div class="card-body">
                                             <label for="nome">Nome</label>
-                                            <input type="text" class="form-control" id="nome" value="">
+
                                         </div>
                                     </div>
-                                    <div class="mt-6">
+                                    <div class="col-md-6">
                                         <div class="card-body">
                                             <label for="valor">Valor</label>
-                                            <input type="number" class="form-control" id="valor" value="" step='0.01' min='0.01'>
+
                                         </div>
                                     </div>
                                 </div>
                                 <hr />
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary">Criar Produto</button>
+                                    <button type="submit" class="btn btn-primary">Criar Venda</button>
                                 </div>
                             </form>
                         </div>
@@ -68,15 +69,19 @@
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th style="width: 80%;">Nome</th>
-                                            <th>Ações</th>
+                                            <th style="width: 40%;">Cliente</th>
+                                            <th style="width: 40%;">Produto</th>
+                                            <th style="width: 10%;">Quantidade</th>
+                                            <th style="width: 10%;">Valor Total</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach($produtos as $id => $produto) { ?>
+                                        <?php foreach($vendas as $id => $venda) { ?>
                                         <tr>
-                                            <td><?= $produto['nome'] ?></td>
-                                            <td></td>
+                                            <td><?= $venda['cliente'] ?></td>
+                                            <td><?= $venda['produto'] ?></td>
+                                            <td><?= $venda['quantidade'] ?></td>
+                                            <td><?= $venda['valor_total'] ?></td>
                                         </tr>
                                         <?php } ?>
                                     </tbody>
@@ -87,5 +92,5 @@
                 </div>
             </div>
         </div>
-        <script src="{{ asset ("/js/viewCriarProduto.js") }}"></script>
+        <script src="{{ asset ("/js/viewVenda.js") }}"></script>
         @endsection

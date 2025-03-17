@@ -12,7 +12,7 @@
 
         @extends('components.tituloConteudo')
 
-        @section('titulo','Cliente')
+        @section('titulo','Produto')
 
         @section('conteudo')
         <!-- Colocado esse style somente por enquanto, mudar depois. -->
@@ -38,14 +38,25 @@
                     <div class="col-md-12">
                         <div class="card card-primary">
                             <!-- form start -->
-                            <form id="quickForm">
-                                <div class="card-body">
-                                    <label for="nome">Nome</label>
-                                    <input type="text" class="form-control" id="nome" value="">
+                            <form href="/produto" method="POST" target="_self" id="quickForm">
+                                @csrf
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card-body">
+                                            <label for="nome">Nome</label>
+                                            <input type="text" name="nome" class="form-control" id="nome" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card-body">
+                                            <label for="valor">Valor</label>
+                                            <input type="number" name="valor" class="form-control" id="valor" value="" step='0.01' min='0.01'>
+                                        </div>
+                                    </div>
                                 </div>
                                 <hr />
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary">Criar Cliente</button>
+                                    <button type="submit" class="btn btn-primary">Criar Produto</button>
                                 </div>
                             </form>
                         </div>
@@ -58,14 +69,16 @@
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th style="width: 80%;">Nome</th>
+                                            <th style="width: 60%;">Nome</th>
+                                            <th style="width: 20%;">Valor</th>
                                             <th>Ações</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach($clientes as $id => $cliente) { ?>
+                                        <?php foreach($produtos as $id => $produto) { ?>
                                         <tr>
-                                            <td><?= $cliente['nome'] ?></td>
+                                            <td><?= $produto['nome'] ?></td>
+                                            <td>R$ <?= $produto['valor'] ?></td>
                                             <td></td>
                                         </tr>
                                         <?php } ?>
@@ -77,6 +90,5 @@
                 </div>
             </div>
         </div>
-        <script src="{{ asset ("/js/viewCriarCliente.js") }}"></script>
-        <!-- /.content -->
+        <script src="{{ asset ("/js/viewProduto.js") }}"></script>
         @endsection

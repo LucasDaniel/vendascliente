@@ -20,7 +20,7 @@ class ClienteController extends Controller
     public function create(Request $request)
     {
         $this->service->create($request->all());
-        return true;
+        return redirect('/cliente');
     }
 
     public function delete(int $id)
@@ -28,7 +28,7 @@ class ClienteController extends Controller
         return $this->service->delete($id);
     }
 
-    public function viewCriarCliente() {
-        return view('dashboard.viewCriarCliente',['clientes'=>$this->service->list()]);
+    public function viewCliente() {
+        return view('dashboard.viewCliente',['clientes'=>$this->service->list()]);
     }
 }
