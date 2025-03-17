@@ -12,7 +12,7 @@
 
         @extends('components.tituloConteudo')
 
-        @section('titulo','Homepage')
+        @section('titulo','Cliente')
 
         @section('conteudo')
         <!-- Colocado esse style somente por enquanto, mudar depois. -->
@@ -40,14 +40,12 @@
                             <!-- form start -->
                             <form id="quickForm">
                                 <div class="card-body">
-                                    @include('components.inputtext',['flag' => 'pteng',
-                                    'title' => 'About Number 1',
-                                    'id_input_text' => 'InputAboutNum1',
-                                    'arg_value' => $args->about_num_1 ? $args->about_num_1 : '' ])
+                                    <label for="nome">Nome</label>
+                                    <input type="text" class="form-control" id="nome" value="">
                                 </div>
                                 <hr />
                                 <div class="card-footer">
-                                    <button type="button" class="btn btn-primary" onclick="saveIndexPage()">Criar Cliente</button>
+                                    <button type="submit" class="btn btn-primary">Criar Cliente</button>
                                 </div>
                             </form>
                         </div>

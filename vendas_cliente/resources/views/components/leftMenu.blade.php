@@ -27,6 +27,10 @@
                         <i class="nav-icon fa fa-user"></i>
                         <p class="text">Cliente</p>
                     </a>
+                    <a href="/produto" class="nav-link">
+                        <i class="nav-icon fa fa-user"></i>
+                        <p class="text">Produto</p>
+                    </a>
                 </li>
             </ul>
         </nav>

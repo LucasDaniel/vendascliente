@@ -27,4 +27,8 @@ class ProdutoController extends Controller
     {
         return $this->service->delete($id);
     }
+
+    public function viewCriarProduto() {
+        return view('dashboard.viewCriarProduto');
+    }
 }
