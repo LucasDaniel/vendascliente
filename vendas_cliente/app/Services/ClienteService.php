@@ -13,19 +13,5 @@ class ClienteService extends BaseService
     public function __construct() {
         $this->repository = new ClienteRepository();
     }
-    
-    public function create(array $data)
-    {
-        $this->repository->create($data);
-    }
-
-    public function list(): array
-    {
-        return $this->repository->list();
-    }
-
-    public function delete(int $id) {
-        return $this->repository->delete($id);
-    }
 
 }

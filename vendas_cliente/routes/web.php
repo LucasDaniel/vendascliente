@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\VendaController;
 
 Route::get('/', function () {
     return view('dashboard.viewDashboard');
@@ -17,3 +18,7 @@ Route::get('/produto', [ProdutoController::class, 'viewProduto']);
 Route::get('/produto/list', [ProdutoController::class, 'list']);
 Route::post('/produto', [ProdutoController::class, 'create']);
 Route::delete('/produto/{id}', [ProdutoController::class, 'delete']);
+
+Route::get('/venda', [VendaController::class, 'viewVenda']);
+Route::get('/venda/list', [VendaController::class, 'list']);
+Route::post('/venda', [VendaController::class, 'create']);

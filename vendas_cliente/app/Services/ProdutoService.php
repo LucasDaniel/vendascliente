@@ -14,18 +14,4 @@ class ProdutoService extends BaseService
         $this->repository = new ProdutoRepository();
     }
 
-    public function create(array $data)
-    {
-        $this->repository->create($data);
-    }
-
-    public function list(): array
-    {
-        return $this->repository->list();
-    }
-
-    public function delete(int $id) {
-        return $this->repository->delete($id);
-    }
-
 }

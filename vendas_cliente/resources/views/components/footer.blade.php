@@ -1,7 +1,6 @@
 <footer class="main-footer">
-    <strong>Copyright &copy; 2025{{ date("Y") == '2025' ? '' : '-'.date("Y") }} <a href="https://pixelinmotion.pt/" target="_blank">Pixel In Motion</a>.</strong>
-    All rights reserved.
+    <strong>Prova feita em 17/03/2025 para a MGS.</strong>
     <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 1.0.0
+        <b>Feito por</b> Lucas Daniel Beltrame de Lima Rodrigues
     </div>
 </footer>

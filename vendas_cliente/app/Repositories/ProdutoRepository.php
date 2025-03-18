@@ -15,20 +15,4 @@ class ProdutoRepository extends BaseRepository
 		$this->model = new Produto();
 	}
 
-    public function create(array $data) {
-        $this->model = new Produto();
-        $this->model->fill($data);
-        $this->model->save();
-    }
-
-    public function list(): array {
-        return $this->model::get()->toArray();
-    }
-
-	public function delete(int $id) {
-        return $this->model->where('id',$id)
-                           ->first()
-                           ->delete();
-    }
-
 }

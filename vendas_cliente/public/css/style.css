@@ -53,3 +53,8 @@
 .m-left-4percent {
     margin-right: 4%;
 }
+
+.select2-selection {
+    width: 100%;
+    height: calc(2.25rem + 2px) !important; 
+}

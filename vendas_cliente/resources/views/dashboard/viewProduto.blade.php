@@ -44,19 +44,20 @@
                                     <div class="col-md-6">
                                         <div class="card-body">
                                             <label for="nome">Nome</label>
-                                            <input type="text" name="nome" class="form-control" id="nome" value="">
+                                            <input id="nome" type="text" name="nome" class="form-control" id="nome" value="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="card-body">
                                             <label for="valor">Valor</label>
-                                            <input type="number" name="valor" class="form-control" id="valor" value="" step='0.01' min='0.01'>
+                                            <input id="valor" type="number" name="valor" class="form-control" id="valor" value="" step='0.01' min='0.01'>
                                         </div>
                                     </div>
                                 </div>
                                 <hr />
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary">Criar Produto</button>
+                                    <button type="button" class="btn btn-primary" onclick="criarProduto()">Criar Produto</button>
+                                    <button id="btSubmit" type="submit" class="btn btn-primary" style="display:none">Criar Produto</button>
                                 </div>
                             </form>
                         </div>
@@ -69,9 +70,8 @@
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th style="width: 60%;">Nome</th>
-                                            <th style="width: 20%;">Valor</th>
-                                            <th>Ações</th>
+                                            <th style="width: 70%;">Nome</th>
+                                            <th style="width: 30%;">Valor</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -79,7 +79,6 @@
                                         <tr>
                                             <td><?= $produto['nome'] ?></td>
                                             <td>R$ <?= $produto['valor'] ?></td>
-                                            <td></td>
                                         </tr>
                                         <?php } ?>
                                     </tbody>

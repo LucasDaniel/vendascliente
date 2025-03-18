@@ -6,6 +6,8 @@
 <script src="{{ asset ("/bower_components/admin-lte/dist/js/adminlte.min.js") }}"></script>
 <!-- SweetAlert2 -->
 <script src="{{ asset ("/bower_components/admin-lte/plugins/sweetalert2/sweetalert2.min.js") }}"></script>
+<!-- Select2 -->
+<script src="{{ asset ("/bower_components/admin-lte/plugins/select2/js/select2.full.min.js") }}"></script>
 <!-- DataTables  & Plugins -->
 <script src="{{ asset ("/bower_components/admin-lte/plugins/datatables/jquery.dataTables.min.js") }}"></script>
 <script src="{{ asset ("/bower_components/admin-lte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js") }}"></script>
@@ -26,6 +28,12 @@
 
 <script>
     $(function() {
+
+        $('.select-cliente').select2();
+        $('.select-produto').select2();
+
+        $('#produto').val(1).trigger('change.select2');
+
         $("#example1").DataTable({
             "language": {
                 "sInfo": "Mostrando _START_ à _END_ de _TOTAL_ entradas"

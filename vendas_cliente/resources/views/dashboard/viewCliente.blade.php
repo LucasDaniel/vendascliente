@@ -50,7 +50,8 @@
                                 </div>
                                 <br>
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary">Criar Cliente</button>
+                                    <button type="button" class="btn btn-primary" onclick="criarCliente()">Criar Cliente</button>
+                                    <button id="btSubmit" type="submit" class="btn btn-primary" style="display:none">Criar Cliente</button>
                                 </div>
                             </form>
                         </div>
@@ -63,15 +64,13 @@
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th style="width: 80%;">Nome</th>
-                                            <th>Ações</th>
+                                            <th style="width: 100%;">Nome</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php foreach($clientes as $id => $cliente) { ?>
                                         <tr>
                                             <td><?= $cliente['nome'] ?></td>
-                                            <td></td>
                                         </tr>
                                         <?php } ?>
                                     </tbody>

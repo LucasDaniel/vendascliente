@@ -1,2 +1,2 @@
 
-$('#username').html(localStorage.getItem('name'));
+$('#username').html('Lucas Daniel');
