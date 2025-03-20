@@ -6,7 +6,7 @@ Faça o download do projeto no git 'git clone'
 
 Rode o projeto pelo 'php aritsan serve'
 
-Rode o migrate 'php artisan migrate'
+Rode o migrate 'php artisan migrate' (se precisar)
 
 Abra o navegador e acesse a url 'http://localhost:8000/'
 
